@@ -111,6 +111,7 @@ class Field {
 
     }
 
+    // Generate a new grid (Note: when restarting game this will automatically be a 5x5 grid. This has been hard coded below)
     static generateField(height, width) {
         const baseArr = [];
         const selectionArr = [hole, fieldCharacter]
@@ -159,14 +160,7 @@ class Field {
   }
   
   
-  const myField = new Field([
-    ['*', '░', 'O'],
-    ['░', 'O', '░'],
-    ['░', '^', '░'],
-  ]);
-
   
-// console.log(myField.showField());
 const fieldArr = Field.generateField(5, 5);
 const gameStart = new Field(fieldArr);
 
